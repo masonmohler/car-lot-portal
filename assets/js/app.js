@@ -25,6 +25,7 @@ async function fetchCars() {
                 <td>
                     <button class="delete-btn" data-id="${car.id}">Delete</button>
                 </td>
+  
             `;
       tableBody.appendChild(row);
     });
@@ -52,7 +53,6 @@ async function deleteCar(carId) {
 
     if (!response.ok) throw new Error("Failed to delete car");
 
-    alert("Car deleted successfully!");
     fetchCars();
   } catch (error) {
     console.error("Error deleting car:", error);

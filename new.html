@@ -4,21 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Mason Mohler" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Spark Inventory Management</title>
   </head>
-  <header>
-    <h1>Spark Inventory Management</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="/new.html">Add New Car</a></li>
-        <li><a href="/update.html">Update A Car</a></li>
-        <li><a href="/delete.html">Delete A Car</a></li>
-      </ul>
-    </nav>
-  </header>
-  <body>
-    <h2>Add New Car</h2>
+  <body class="container">
+    <header>
+      <h1>Spark Inventory Management</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">View Inventory</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h2 id="formTitle">Add New Car</h2>
     <form id="addCarForm">
       <label for="vin">VIN:</label>
       <input type="text" id="vin" required />

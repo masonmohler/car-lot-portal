@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mason Mohler" />
+    <meta
+      name="description"
+      content="An inventory managment system for a car lot"
+    />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <title>Spark Inventory Management</title>
+  </head>
+  <body>
+    <header>
+      <h1>Spark Inventory Management</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="/new.html">Add New Car</a></li>
+          <li><a href="/update.html">Update A Car</a></li>
+          <li><a href="/delete.html">Delete A Car</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h2>Current Inventory</h2>
+      <table id="carTable">
+        <thead>
+          <tr>
+            <th>Stock Number</th>
+            <th>VIN</th>
+            <th>Year</th>
+            <th>Make</th>
+            <th>Model</th>
+            <th>Color</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </main>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

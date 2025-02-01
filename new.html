@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Mason Mohler" />
+    <title>Spark Inventory Management</title>
+  </head>
+  <header>
+    <h1>Spark Inventory Management</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/new.html">Add New Car</a></li>
+        <li><a href="/update.html">Update A Car</a></li>
+        <li><a href="/delete.html">Delete A Car</a></li>
+      </ul>
+    </nav>
+  </header>
+  <body>
+    <h2>Add New Car</h2>
+    <form id="addCarForm">
+      <label for="vin">VIN:</label>
+      <input type="text" id="vin" required />
+
+      <label for="stockNumber">Stock Number:</label>
+      <input type="text" id="stockNumber" required />
+
+      <label for="price">Price:</label>
+      <input type="number" id="price" required />
+
+      <label for="make">Make:</label>
+      <input type="text" id="make" required />
+
+      <label for="model">Model:</label>
+      <input type="text" id="model" required />
+
+      <label for="color">Color:</label>
+      <input type="text" id="color" required />
+
+      <label for="year">Year:</label>
+      <input type="number" id="year" required />
+
+      <button type="submit">Add Car</button>
+    </form>
+    <script src="/assets/js/add-car.js"></script>
+  </body>
+</html>

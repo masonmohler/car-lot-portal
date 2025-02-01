@@ -22,10 +22,40 @@ async function fetchCars() {
                 <td>${car.model}</td>
                 <td>${car.color}</td>
                 <td>$${car.price}</td>
+                <td>
+                    <button class="delete-btn" data-id="${car.id}">Delete</button>
+                </td>
             `;
       tableBody.appendChild(row);
     });
+    document.querySelectorAll(".delete-btn").forEach((button) => {
+      button.addEventListener("click", (event) => {
+        const carId = event.target.getAttribute("data-id");
+        deleteCar(carId);
+      });
+    });
   } catch (error) {
     console.error("Error loading inventory:", error);
+  }
+}
+
+async function deleteCar(carId) {
+  if (!confirm("Are you sure you want to delete this car?")) return;
+
+  try {
+    const response = await fetch(
+      `https://car-lot-inventory.onrender.com/cars/${carId}`,
+      {
+        method: "DELETE",
+      }
+    );
+
+    if (!response.ok) throw new Error("Failed to delete car");
+
+    alert("Car deleted successfully!");
+    fetchCars();
+  } catch (error) {
+    console.error("Error deleting car:", error);
+    alert("Error deleting car. Please try again.");
   }
 }
